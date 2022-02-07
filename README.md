@@ -1,5 +1,5 @@
 # GLAM
-This is the official code for paper "SPEECH EMOTION RECOGNITION WITH GLOBAL-AWARE FUSION ON MULTI-SCALE FEATURE REPRESENTATION" published in ICASSP 2022
+This is the official code for paper "Speech Emotion Recognition with Global-Aware Fusion on Multi-scale Feature Representation" published in ICASSP 2022
 
 
 
