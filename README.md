@@ -8,12 +8,7 @@ GLobal-Aware Multi-scale (GLAM) is a novel neural network to learn multi-scale f
 
 This repository contains the implementation used for the results in our [paper](https://arxiv.org/abs/2022).
 
-![GLAM](results/GLAM.pdf)
-<div  align="center">    
-<img src="results/GLAM.pdf" 
-width = "350" height = "250" 
-alt="1" align=center />
-</div>
+![GLAM](results/GLAM.png)
 
 ## Requirements and Installation
 * Python version 3.6
@@ -96,10 +91,10 @@ Training scripts are stored in `scripts` directory. Please move the script to ro
 
 ## Results
 Confusion matrix on Improvisation dataset. a) and b) represent results of AACNN and GLAM model respectively.
-![confusion](results/confusion.pdf)
+![confusion](results/confusion.png)
 
 Visualizations of hidden states by commonly-used t- SNE method on improvisation dataset for four models: a) APCNN; b) MHCNN; c) AACNN; d) GLAM.
-![tsne](results/tsne.pdf)
+![tsne](results/tsne.png)
 
 Comparison of evaluation metrics on three types of datasets.
 | Dataset | Model         | WA                        | UA                        | macro F1                  | micro F1                  |
