@@ -9,6 +9,11 @@ GLobal-Aware Multi-scale (GLAM) is a novel neural network to learn multi-scale f
 This repository contains the implementation used for the results in our [paper](https://arxiv.org/abs/2022).
 
 ![GLAM](results/GLAM.pdf)
+<div  align="center">    
+<img src="results/GLAM.pdf" 
+width = "350" height = "250" 
+alt="1" align=center />
+</div>
 
 ## Requirements and Installation
 * Python version 3.6
