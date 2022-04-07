@@ -1,0 +1,35 @@
+#!/bin/bash
+
+if [[ -z $1 ]]; then
+    gpu=1
+else
+    gpu=$1
+fi
+
+if [[ -z $2 ]]; then
+    n=1
+else
+    n=$2
+fi
+
+if [[ -z $3 ]]; then
+    alpha=0.5
+else
+    alpha=$3
+fi
+
+model=GLAM
+dir=data/script_mfccS1.8O1.6a$alpha/$model
+
+while read seed; do
+    if [[ $n == 0 ]]; then
+        break
+    fi
+    if ! grep -q $seed $dir/${model}_mfcc_script.metric; then
+        if [[ ! -d $dir/$seed ]]; then
+            echo $dir/$seed
+            python train.py --alpha $alpha -d $dir/$seed -g $gpu --seed $seed --impro_or_script script 
+            n=$[n-1]
+        fi
+    fi
+done < seeds.txt

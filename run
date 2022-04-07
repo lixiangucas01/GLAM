@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# specify GPU. If gpu<0, cpu is used.
+if [[ -z $1 ]]; then
+    gpu=0
+else
+    gpu=$1
+fi
+
+if [[ -z $2 ]]; then
+    n=1
+else
+    n=$2
+fi
+
+alpha=0.5 # mixup parameter
+
+model=GLAM # default
+# Albation study: ResMultiConv3, MAResMultiConv3, AAResMultiConv3
+# Comparison: MACNN, CNN_AttnPooling
+
+impro_or_script=impro # default
+# script, all
+
+dir=data/mfccS1.8O1.6a$alpha/$model
+
+while read seed; do
+    if ! grep -q $seed $dir/${model}_mfcc_impro.metric &>/dev/null; then
+        if [[ $n == 0 ]]; then
+            break
+        fi
+        if [[ ! -d $dir/$seed ]]; then
+            echo $dir/$seed
+            python train.py --alpha $alpha --model $model --impro_or_script $impro_or_script --seed $seed -d $dir/$seed
+            n=$[n-1]
+        fi
+    fi
+done < seeds.txt
