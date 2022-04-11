@@ -8,7 +8,7 @@ GLobal-Aware Multi-scale (GLAM) is a novel neural network to learn multi-scale f
 
 This repository contains the implementation used for the results in our [paper](https://arxiv.org/abs/2022).
 
-![GLAM](results/GLAM.jpg)
+![GLAM](results/GLAM.png)
 
 ## Requirements and Installation
 * Python version 3.6
@@ -138,15 +138,15 @@ Split the dataset into training, validation and testing sets at a ratio of 8:1:1
 |---------|---------------|---------------------------|---------------------------|---------------------------|---------------------------|
 | Improvisation        | APCNN         | 69.93 +/- 4.33 | 62.70 +/- 5.16 | 63.04 +/- 5.94 | 68.86 +/- 5.48
 | Improvisation        | MHCNN         | 76.13 +/- 2.80 | 71.15 +/- 4.11 | 71.91 +/- 3.92 | 75.92 +/- 2.87
-| Improvisation        | AACNN         | 
+| Improvisation        | AACNN | 78.65+/-3.30 | 74.31+/-4.59 | 74.78+/-4.43 | 78.47+/-3.40        | 
 | Improvisation        | **GLAM** | **81.04 +/- 2.65** | **75.89 +/- 3.94** | **76.79 +/- 3.78** | **80.78 +/- 2.75** 
 | Script        | APCNN         | 53.48 +/- 3.83 | 55.77 +/- 3.60 | 48.14 +/- 4.27 | 48.10 +/- 4.90
 | Script        | MHCNN         | 63.03 +/- 3.52 | 64.37 +/- 3.24 | 61.32 +/- 3.88 | 61.77 +/- 4.31
-| Script        | AACNN         | 
+| Script        | AACNN | 65.49+/-3.49 | 65.87+/-2.98 | 64.36+/-3.42 | 65.22+/-3.77       | 
 | Script        | **GLAM** | **69.80 +/- 3.16** | **70.63 +/- 3.17** | **68.85 +/- 3.40** | **69.30 +/- 3.42**
 | Full        | APCNN         | 60.33 +/- 2.67 | 62.16 +/- 2.55 | 60.03 +/- 2.78 | 59.67 +/- 2.88
 | Full        | MHCNN         | 67.67 +/- 2.34 | 68.65 +/- 2.32 | 67.55 +/- 2.34 | 67.58 +/- 2.36
-| Full        | AACNN         | 
+| Full        | AACNN | 67.71+/-2.25 | 68.67+/-2.22 | 67.62+/-2.32 | 67.46+/-2.33        | 
 | Full        | **GLAM** | **71.63 +/- 2.12** | **72.56 +/- 2.05** | **71.53 +/- 2.16** | **71.42 +/- 2.19** |
 
 
